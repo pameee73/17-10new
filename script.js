@@ -28,4 +28,4 @@ async function datos(raw) {
     }
 }
 
-datos("https://raw.githubusercontent.com/pameee73/17-10/refs/heads/main/datos.json");
+datos("https://raw.githubusercontent.com/pameee73/17-10new/refs/heads/main/datos.json");
