@@ -28,4 +28,7 @@ async function datos(raw) {
     }
 }
 
-datos("https://raw.githubusercontent.com/pameee73/17-10new/refs/heads/main/datos.json");
+let consulta = await fetch(raw);
+let resultado = await consulta.json();
+let trabajos = resultado.data;
+console.log(trabajos);
