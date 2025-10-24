@@ -2,9 +2,10 @@ const portfolio = document.querySelector("#portafolio");
 
 async function datos(raw) {
     try {
-        let consulta = await fetch(raw);
-        let trabajos = await consulta.json();
-        console.log(trabajos);
+       let consulta = await fetch(raw);
+let resultado = await consulta.json();
+let trabajos = resultado.data;
+console.log(trabajos);
         trabajos.forEach((trabajo) => {
     portfolio.innerHTML += `
         <div class="col">
@@ -28,4 +29,4 @@ async function datos(raw) {
     }
 }
 
-datos("https://raw.githubusercontent.com/pameee73/17-10new/refs/heads/main/datos.json");
+datos("https://api.myjson.online/v1/records/607e0206-a6a8-4cef-b02d-15173bbdeb21");
